@@ -4,6 +4,6 @@ BEGIN
         ServerName      nvarchar(128)   NOT NULL,
         ServerFQDN      nvarchar(128)   NOT NULL,
         Environment     varchar(16)     NULL
-        CONSTRAINT PK_Servers PRIMARY KEY CLUSTERED (ServerName)
+        CONSTRAINT PK_EstateServers PRIMARY KEY CLUSTERED (ServerName)
         );
 END;
