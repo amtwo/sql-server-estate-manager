@@ -43,6 +43,7 @@ foreach($Server in $ServerList){
     Write-Verbose "Evaluating Server:  $($Server.ServerName)"
 
     # Test is the server is accessible via WMI, skip additional connection attempts if the server is unreachable
+    # Should this be using FQDN to connect?
     If ( (Test-NetConnection -ComputerName $Server.ServerName -Port 135).TcpTestSucceeded ){
         
             # If there are stacked instances, we'll need to loop through & grab them all.
