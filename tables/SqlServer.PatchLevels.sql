@@ -4,7 +4,7 @@ BEGIN
         ProductVersion      varchar (16)    NOT NULL,
         MajorVersion        decimal(4,2)    NULL,
         ProductLevel        varchar (16)    NULL,
-        ProductUpdateLevel  varchar (16)    NULL,
+        ProductUpdateLevel  varchar (32)    NULL,
         ReleaseDate         date            NULL,
         SupportEndDate      date            NULL
         CONSTRAINT PK_SqlPatchLevels PRIMARY KEY CLUSTERED (ProductVersion)

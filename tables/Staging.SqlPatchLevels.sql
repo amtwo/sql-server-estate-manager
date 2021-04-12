@@ -1,5 +1,3 @@
-DROP TABLE Staging.SqlPatchLevels;
-
 IF ( object_id('Staging.SqlPatchLevels','U') IS NULL )
 BEGIN
     CREATE TABLE Staging.SqlPatchLevels (

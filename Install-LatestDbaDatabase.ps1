@@ -83,6 +83,13 @@ foreach($instance in $InstanceName) {
         Write-Verbose $file.FullName
         Invoke-Sqlcmd -ServerInstance $instance -Database $DatabaseName -InputFile $file.FullName
     }
+    # Finally, load data
+    Write-Verbose "`n        ***Loading Data `n"
+    $fileList = Get-ChildItem -Path .\data -Recurse -Filter *.sql
+    Foreach ($file in $fileList){
+        Write-Verbose $file.FullName
+        Invoke-Sqlcmd -ServerInstance $instance -Database $DatabaseName -InputFile $file.FullName  -QueryTimeout 300
+    }
 
 
 #That's it!

@@ -49,3 +49,4 @@ FROM (VALUES
     ('11.00.3000',   11.00, 'SP1', NULL,   '20121107', '20150714')
 ) AS x(ProductVersion, MajorVersion, ProductLevel, ProductUpdateLevel, ReleaseDate, SupportEndDate);
 
+EXEC SqlServer.PatchLevels_Load @MajorVersion = 11;

@@ -20,3 +20,4 @@ FROM (VALUES
     ('15.4063.15', 15.00, 'RTM', 'CU7', '20200902', NULL)
 ) AS x(ProductVersion, MajorVersion, ProductLevel, ProductUpdateLevel, ReleaseDate, SupportEndDate);
 
+EXEC SqlServer.PatchLevels_Load @MajorVersion = 15;

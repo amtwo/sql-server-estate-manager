@@ -63,3 +63,5 @@ FROM (VALUES
     ('12.0.6372.1', 12.00, 'SP3', 'CU4 Security Update', '20200211', '20240709'),
     ('12.0.6433.1', 12.00, 'SP3', 'CU4 Security Update', '20210112', '20240709')
 ) AS x(ProductVersion, MajorVersion, ProductLevel, ProductUpdateLevel, ReleaseDate, SupportEndDate);
+
+EXEC SqlServer.PatchLevels_Load @MajorVersion = 12;
