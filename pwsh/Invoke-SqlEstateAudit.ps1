@@ -21,7 +21,6 @@ Param(
         Mandatory = $false,
         ParameterSetName = 'DbTarget'
     )]
-
     [parameter(
         Mandatory = $true,
         ParameterSetName = 'FileTarget'
